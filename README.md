@@ -1,6 +1,7 @@
 # s3Access
 
-##build.gradle
+## build.gradle
+
 repositoriesに下記を追加する
 ```
 	maven { url "https://repo.spring.io/snapshot" }
@@ -23,7 +24,7 @@ dependencyManagement {
 }
 ```
 
-##application.properties
+## application.properties
 
 application.propertiesに
 cloud.aws.credentials.accessKey=${AWS_ACCESS_KEY_ID}<br>
@@ -32,7 +33,7 @@ cloud.aws.region.static=${AWS_REGION}<br>
 cloud.aws.region.auto=false<br>
 を設定
 
-##実装
+## 実装
 
 ResourcePatternResolver,ResourceLoader<br>
 をインジェクションするだけ。<br>
@@ -46,7 +47,7 @@ sampleは<br>
 詳細は下記<br>
 https://cloud.spring.io/spring-cloud-aws/spring-cloud-aws.html<br>
 
-##deleteについて
+## deleteについて
 
 deleteはないので、deleteしたい場合は<br>
 S3Clientが必要となる。<br>
