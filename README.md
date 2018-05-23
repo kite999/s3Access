@@ -10,10 +10,16 @@ dependenciesに下記を追加する
 ```
 compile('org.springframework.cloud:spring-cloud-starter-aws')
 ```
-extを追加
+ext,dependencyManagementを追加
 ```
 ext {
 	springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
 }
 ```
 
