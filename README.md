@@ -31,7 +31,9 @@ cloud.aws.credentials.accessKey=${AWS_ACCESS_KEY_ID}<br>
 cloud.aws.credentials.secretKey=${AWS_SECRET_ACCESS_KEY}<br>
 cloud.aws.region.static=${AWS_REGION}<br>
 cloud.aws.region.auto=false<br>
-を設定
+cloud.aws.stack.auto=false<br>
+を設定<br>
+最後のcloud.aws.stack.auto=falseはec2で動かすかつユーザ権限をs3のみにする場合は必要。（stackを使わない場合）
 
 ## 実装
 
