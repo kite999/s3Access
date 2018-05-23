@@ -24,6 +24,7 @@ dependencyManagement {
 ```
 
 ##application.properties
+
 application.propertiesに
 cloud.aws.credentials.accessKey=${AWS_ACCESS_KEY_ID}<br>
 cloud.aws.credentials.secretKey=${AWS_SECRET_ACCESS_KEY}<br>
@@ -32,6 +33,7 @@ cloud.aws.region.auto=false<br>
 を設定
 
 ##実装
+
 ResourcePatternResolver,ResourceLoader<br>
 をインジェクションするだけ。<br>
 s3://が対象だとよしなにしてくれる。<br>
@@ -43,6 +45,8 @@ sampleは<br>
 
 詳細は下記<br>
 https://cloud.spring.io/spring-cloud-aws/spring-cloud-aws.html<br>
+
+##deleteについて
 
 deleteはないので、deleteしたい場合は<br>
 S3Clientが必要となる。<br>
