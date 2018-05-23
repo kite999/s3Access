@@ -1,10 +1,31 @@
 # s3Access
+
+##build.gradle
+repositoriesに下記を追加する
+```
+	maven { url "https://repo.spring.io/snapshot" }
+	maven { url "https://repo.spring.io/milestone" }
+```
+dependenciesに下記を追加する
+```
+compile('org.springframework.cloud:spring-cloud-starter-aws')
+```
+extを追加
+```
+ext {
+	springCloudVersion = 'Finchley.BUILD-SNAPSHOT'
+}
+```
+
+##application.properties
 application.propertiesに
 cloud.aws.credentials.accessKey=${AWS_ACCESS_KEY_ID}<br>
 cloud.aws.credentials.secretKey=${AWS_SECRET_ACCESS_KEY}<br>
 cloud.aws.region.static=${AWS_REGION}<br>
 cloud.aws.region.auto=false<br>
-を設定し<br>
+を設定
+
+##実装
 ResourcePatternResolver,ResourceLoader<br>
 をインジェクションするだけ。<br>
 s3://が対象だとよしなにしてくれる。<br>
